@@ -13,7 +13,8 @@ mongoose
     console.log(err);
 });
 
-app.use("/api/user", userRoute);
+app.use(express.json);
+app.use("/api/users", userRoute);
 
 app.listen(4500, () => {
     console.log("listening on http://localhost:4500")
